@@ -1,0 +1,218 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/weeknd5.jpg'); /* Set initial background image */
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-attachment: fixed; /* Keep the background image fixed in place */
+    background-position: center; /* Center the background image */
+    animation: slideshow s 69infinite; /* 120 seconds total for 10 images */
+    transition: background-image 1s ease-in-out;
+}
+
+/* Keyframes for background slideshow */
+@keyframes slideshow {
+    0% {
+        background-image: url('/static/images/weeknd5.jpg');
+    }
+    10% {
+        background-image: url('/static/images/weeknd6.jpg');
+    }
+    20% {
+        background-image: url('/static/images/weeknd7.jpg');
+    }
+    30% {
+        background-image: url('/static/images/weeknd8.jpg');
+    }
+    40% {
+        background-image: url('/static/images/weeknd9.jpg');
+    }
+    50% {
+        background-image: url('/static/images/weeknd10.jpg');
+    }
+    60% {
+        background-image: url('/static/images/weeknd5.jpg'); /* Repeat to ensure smooth transition */
+    }
+    70% {
+        background-image: url('/static/images/weeknd6.jpg');
+    }
+    80% {
+        background-image: url('/static/images/weeknd7.jpg');
+    }
+    90% {
+        background-image: url('/static/images/weeknd8.jpg');
+    }
+    100% {
+        background-image: url('/static/images/weeknd9.jpg');
+    }
+}
+
+/* Container styles */
+.container {
+    width: 90%; /* Adjust width for better responsiveness */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    0% { border-right: 2px solid transparent; }
+    100% { border-right: 2px solid #98ff53; }
+}
+
+@keyframes typingAndReverse {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+}
+
+h1 {
+    text-align: center;
+    color: #ff4040; /* Text color */
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #98ff53;
+    animation: typingAndReverse 8s steps(30, end) 1s infinite, blink 0.75s step-end infinite;
+}
+
+#songs-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#songs-list li {
+    background-color: rgba(255, 255, 255, 0.347); /* Transparent background for boxes */
+    border: 1px solid #d80000; /* Darker red border for contrast */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    color: black; /* Black color for text */
+    font-size: 18px; /* Adjust the size as needed */
+    font-weight: bold; /* Bold text */
+}
+
+#songs-list li span {
+    color: #000000; /* Black color for song names */
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Adjust size as needed */
+}
+
+#songs-list li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #28a745;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#songs-list li a:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Social Media Icons */
+.social-media {
+    position: fixed; /* Fixed position for consistent placement */
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.social-media a {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: #ffffff; /* Background color for the icons */
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8); /* Red glowing background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Animation for icons */
+.social-media a:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 1); /* Brighter red glow on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #songs-list li {
+        font-size: 16px; /* Slightly smaller font size for smaller screens */
+        padding: 10px;
+    }
+
+    .social-media {
+        top: 10px;
+        left: 10px;
+        gap: 10px; /* Less space between icons */
+    }
+
+    .social-media a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #songs-list li {
+        font-size: 14px; /* Further reduce font size for very small screens */
+        padding: 8px;
+    }
+
+    .social-media {
+        top: 5px;
+        left: 5px;
+        gap: 5px; /* Even less space between icons */
+    }
+
+    .social-media a {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Define keyframes for scroll animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

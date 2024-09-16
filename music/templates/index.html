@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+</head>
+<body>
+    <!-- Social Media Icons -->
+    <div class="social-media">
+        <a href="https://www.instagram.com/anxmeshhh" target="_blank">
+            <img src="{% static 'images/yo2.png' %}" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/animesh-gupta-7ab4a6327/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bcvrs%2FsX2RHiSnQxFMUIBkg%3D%3D" target="_blank">
+            <img src="{% static 'images/yo3.png' %}" alt="LinkedIn">
+        </a>
+        <a href="https://open.spotify.com/playlist/7aYH3mMVYM0zZsgxpB3ifJ?si=TJOH7AJrQoWANYrRdyqwVQ&pi=a-u9MPTYCXTqy-" target="_blank">
+            <img src="{% static 'images/yo1.png' %}" alt="Spotify">
+        </a>
+    </div>
+
+    <div class="container">
+        <h1>Animesh's Playlist</h1>
+        <ul id="songs-list"></ul>
+    </div>
+</body>
+</html>
